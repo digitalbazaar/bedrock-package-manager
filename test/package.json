@@ -1,0 +1,14 @@
+{
+  "name": "bedrock-package-manager-test",
+  "version": "0.0.1-0",
+  "private": true,
+  "scripts": {
+    "test": "node --preserve-symlinks test test"
+  },
+  "dependencies": {
+    "bedrock": "^1.15.0",
+    "bedrock-package-manager": "file:..",
+    "bedrock-package-manager-mock-package": "file:./mock-package",
+    "bedrock-test": "^2.1.0"
+  }
+}

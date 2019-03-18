@@ -1,0 +1,29 @@
+# bedrock-package-manager
+
+## Usage
+A package should register itself using a Bedrock event handler.
+```js
+bedrock.events.on('bedrock.init', () => {
+  brPackageManager.register({
+    alias: 'mockPackage',
+    meta: {
+      optional: 'meta values',
+    },
+    packageName: 'bedrock-package-manager-mock-package',
+    type: 'bedrock-mock-plugin',
+  });
+});
+```
+
+Use a registered package in an API.
+```js
+exports.getReports = async ({query = {}, storageApi}) => {
+  // storageApi === 'mockPackage' would match the registration shown above
+  const pkg = brPackageManager.get({alias: storageApi, type: 'bedrock-mock-plugin'});
+  const storage = require(pkg.packageName);
+  return storage.find(query);
+};
+```
+
+## API Reference
+{{>main}}
