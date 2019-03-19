@@ -34,7 +34,7 @@ Get package information.
 **Returns**: [<code>PackageInfo</code>](#PackageInfo) - The package information.  
 **Throws**:
 
-- <code>BedrockError</code> Will throw a NotFoundError if the package is not
+- <code>BedrockError</code> Will throw a `NotFoundError` if the package is not
   found.
 
 
@@ -66,8 +66,8 @@ Register a package.
 **Returns**: [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo) - The package information.  
 **Throws**:
 
-- <code>BedrockError</code> Will throw a DuplicateError if the package is already
-  registered.
+- <code>BedrockError</code> Will throw a `DuplicateError` if the package is
+  already registered.
 
 
 | Param | Type | Default | Description |
