@@ -74,11 +74,11 @@ describe('bedrock-package-manager', () => {
   }); // end getType API
 
   describe('register API', () => {
-    it('throws DuplicateError on duplicate package', () => {
+    it('throws DuplicateError on duplicate type and packageName', () => {
       let result;
       let error;
       try {
-        // same as mock-package
+        // same type and packageName as mock-package
         result = brPackageManager.register({
           packageName: 'bedrock-package-manager-mock-package',
           type: 'bedrock-mock-plugin',
@@ -89,6 +89,56 @@ describe('bedrock-package-manager', () => {
       should.not.exist(result);
       should.exist(error);
       error.name.should.equal('DuplicateError');
+    });
+    it('throws DuplicateError on duplicate type and alias', () => {
+      let result;
+      let error;
+      try {
+        // alias and type is the same as mock-package, but packageName is unique
+        result = brPackageManager.register({
+          alias: 'mockPackage',
+          packageName: 'bedrock-unique-package',
+          type: 'bedrock-mock-plugin',
+        });
+      } catch(e) {
+        error = e;
+      }
+      should.not.exist(result);
+      should.exist(error);
+      error.name.should.equal('DuplicateError');
+    });
+    it('successfully registers same packageName with a unique type', () => {
+      let result;
+      let error;
+      try {
+        // same packageName as mock-package, but different type
+        result = brPackageManager.register({
+          packageName: 'bedrock-package-manager-mock-package',
+          type: 'bedrock-mock-plugin-unique1',
+        });
+      } catch(e) {
+        error = e;
+      }
+      assertNoError(error);
+      // no return value on success
+      should.not.exist(result);
+    });
+    it('successfully registers same alias with a unique type', () => {
+      let result;
+      let error;
+      try {
+        // same packageName and alias as mock-package, but different type
+        result = brPackageManager.register({
+          alias: 'mockPackage',
+          packageName: 'bedrock-package-manager-mock-package',
+          type: 'bedrock-mock-plugin-unique2',
+        });
+      } catch(e) {
+        error = e;
+      }
+      assertNoError(error);
+      // no return value on success
+      should.not.exist(result);
     });
   }); // end registerAPI
 });
