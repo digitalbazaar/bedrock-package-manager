@@ -38,6 +38,21 @@ describe('bedrock-package-manager', () => {
       should.exist(result);
       result.should.eql(mockResult);
     });
+    it('packageInfo is frozen and does not allow mutation', async () => {
+      const alias = 'mockPackage';
+      const type = 'bedrock-mock-plugin';
+      const result = brPackageManager.get({alias, type});
+      let error;
+      try {
+        result.meta = {newMeta: 'information'};
+      } catch(e) {
+        error = e;
+      }
+      should.exist(error);
+      error.should.be.instanceof(TypeError);
+      // meta should be unchanged from the original
+      result.meta.should.eql({optional: 'meta values'});
+    });
     it('throws NotFoundError on unknown package', async () => {
       let error;
       let result;

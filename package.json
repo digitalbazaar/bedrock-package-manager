@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-package-manager",
   "dependencies": {
-    "assert-plus": "^1.0.0"
+    "assert-plus": "^1.0.0",
+    "deep-freeze": "0.0.1"
   },
   "peerDependencies": {
     "bedrock": "^1.15.0"
