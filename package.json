@@ -1,6 +1,6 @@
 {
   "name": "bedrock-package-manager",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "Bedrock package manager",
   "main": "lib",
   "scripts": {
