@@ -48,7 +48,7 @@ exports.getReports = async ({query = {}, storageApi}) => {
 * [bedrock-package-manager](#module_bedrock-package-manager)
     * [.get(options)](#module_bedrock-package-manager.get) ⇒ [<code>PackageInfo</code>](#PackageInfo)
     * [.findType(options)](#module_bedrock-package-manager.findType) ⇒ [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo)
-    * [.register(options)](#module_bedrock-package-manager.register) ⇒ [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo)
+    * [.register(options)](#module_bedrock-package-manager.register) ⇒ <code>undefined</code>
 
 <a name="module_bedrock-package-manager.get"></a>
 
@@ -85,11 +85,10 @@ Find packages by type.
 
 <a name="module_bedrock-package-manager.register"></a>
 
-### bedrock-package-manager.register(options) ⇒ [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo)
+### bedrock-package-manager.register(options) ⇒ <code>undefined</code>
 Register a package.
 
 **Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)  
-**Returns**: [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo) - The package information.  
 **Throws**:
 
 - <code>BedrockError</code> Will throw a `DuplicateError` if the package is
