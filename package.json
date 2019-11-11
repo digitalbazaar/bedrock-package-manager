@@ -2,6 +2,7 @@
   "name": "bedrock-package-manager",
   "version": "1.0.1-0",
   "description": "Bedrock package manager",
+  "license": "SEE LICENSE IN LICENSE.md",
   "main": "lib",
   "scripts": {
     "generate-readme": "jsdoc2md -t readme-template.hbs lib/*.js > README.md",
