@@ -6,9 +6,9 @@
     "test": "node --preserve-symlinks test test"
   },
   "dependencies": {
-    "bedrock": "^1.15.0",
+    "bedrock": "^3.0.1",
     "bedrock-package-manager": "file:..",
     "bedrock-package-manager-mock-package": "file:./mock-package",
-    "bedrock-test": "^2.1.0"
+    "bedrock-test": "^4.0.2"
   }
 }

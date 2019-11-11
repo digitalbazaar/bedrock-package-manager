@@ -15,7 +15,7 @@
   "author": {
     "name": "Digital Bazaar, Inc.",
     "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com"
+    "url": "https://digitalbazaar.com/"
   },
   "bugs": {
     "url": "https://github.com/digitalbazaar/bedrock-package-manager/issues"
@@ -26,14 +26,14 @@
     "deep-freeze": "0.0.1"
   },
   "peerDependencies": {
-    "bedrock": "^1.15.0"
+    "bedrock": "1.15.0 - 3.x"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
-    "eslint-config-digitalbazaar": "^2.0.0",
+    "eslint-config-digitalbazaar": "^2.0.1",
     "eslint-plugin-jsdoc": "^4.4.3",
     "jsdoc": "^3.5.5",
     "jsdoc-to-markdown": "^4.0.1"
