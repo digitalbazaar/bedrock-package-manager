@@ -1,6 +1,6 @@
 {
   "name": "bedrock-package-manager",
-  "version": "1.0.1",
+  "version": "1.0.2-0",
   "description": "Bedrock package manager",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "lib",
