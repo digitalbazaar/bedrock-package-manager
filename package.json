@@ -26,16 +26,16 @@
     "deep-freeze": "0.0.1"
   },
   "peerDependencies": {
-    "bedrock": "1.15.0 - 3.x"
+    "bedrock": "^4.3.0"
   },
   "engines": {
     "node": ">=8.9.0"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
+    "eslint": "^7.31.0",
     "eslint-config-digitalbazaar": "^2.0.1",
-    "eslint-plugin-jsdoc": "^4.4.3",
+    "eslint-plugin-jsdoc": "^35.5.1",
     "jsdoc": "^3.5.5",
-    "jsdoc-to-markdown": "^4.0.1"
+    "jsdoc-to-markdown": "^7.0.1"
   }
 }

@@ -1,5 +1,10 @@
 # bedrock-package-manager
 
+## 1.1.0 - 2021-07-xx
+
+### Changed
+- Update peer dependencies; use bedrock@4.
+
 ## 1.0.1 - 2019-11-12
 
 ### Changed
