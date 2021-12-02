@@ -1,5 +1,10 @@
 # bedrock-package-manager
 
+## 1.2.0 - 2021-TBD
+
+### Changed
+- Setup coverage and github workflows.
+
 ## 1.1.0 - 2021-07-23
 
 ### Changed
