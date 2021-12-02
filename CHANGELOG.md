@@ -2,7 +2,7 @@
 
 ## 1.2.0 - 2021-TBD
 
-### Changed
+### Added
 - Setup coverage and github workflows.
 
 ## 1.1.0 - 2021-07-23
