@@ -1,9 +1,15 @@
 # bedrock-package-manager
 
-## 1.2.0 - 2021-TBD
+## 1.2.0 - 2022-03-xx
 
 ### Added
 - Setup coverage and github workflows.
+
+### Changed
+- Update peer deps:
+  - `bedrock@4.5`.
+- Update internals to use esm style and use `esm.js` to
+  transpile to CommonJS.
 
 ## 1.1.0 - 2021-07-23
 
