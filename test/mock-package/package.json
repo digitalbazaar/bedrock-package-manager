@@ -1,6 +1,7 @@
 {
-  "name": "bedrock-package-manager-mock-package",
+  "name": "@bedrock/package-manager-mock-package",
   "version": "0.0.1-0",
+  "type": "module",
   "description": "Bedrock Package Manager Mock Package",
   "main": "index.js"
 }

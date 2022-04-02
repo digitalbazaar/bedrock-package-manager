@@ -1,5 +1,13 @@
 # bedrock-package-manager
 
+## 2.0.0 - 2022-04-xx
+
+### Changed
+- **BREAKING**: Rename package to `@bedrock/package-manager`.
+- **BREAKING**: Convert to module (ESM).
+- **BREAKING**: Remove default export.
+- **BREAKING**: Require node 14.x.
+
 ## 1.2.0 - 2022-03-28
 
 ### Added

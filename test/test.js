@@ -1,11 +1,9 @@
 /*!
- * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import * as bedrock from '@bedrock/core';
+import '@bedrock/package-manager';
+import '@bedrock/package-manager-mock-package';
+import '@bedrock/test';
 
-const bedrock = require('bedrock');
-require('bedrock-package-manager');
-require('bedrock-package-manager-mock-package');
-
-require('bedrock-test');
 bedrock.start();
