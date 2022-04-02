@@ -9,7 +9,7 @@ bedrock.events.on('bedrock.init', () => {
     meta: {
       optional: 'meta values',
     },
-    packageName: 'bedrock-package-manager-mock-package',
+    packageName: '@bedrock/package-manager-mock-package',
     type: 'bedrock-mock-plugin',
   });
 });
@@ -19,8 +19,10 @@ Use a registered package in an API.
 ```js
 exports.getReports = async ({query = {}, storageApi}) => {
   // storageApi === 'mockPackage' would match the registration shown above
-  const pkg = brPackageManager.get({alias: storageApi, type: 'bedrock-mock-plugin'});
-  const storage = require(pkg.packageName);
+  const pkg = brPackageManager.get({
+    alias: storageApi, type: 'bedrock-mock-plugin'
+  });
+  const storage = await import(pkg.packageName);
   return storage.find(query);
 };
 ```
@@ -55,8 +57,8 @@ exports.getReports = async ({query = {}, storageApi}) => {
 ### bedrock-package-manager.get(options) ⇒ [<code>PackageInfo</code>](#PackageInfo)
 Get package information. One of `alias` or `packageName` is required.
 
-**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)  
-**Returns**: [<code>PackageInfo</code>](#PackageInfo) - The package information.  
+**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)
+**Returns**: [<code>PackageInfo</code>](#PackageInfo) - The package information.
 **Throws**:
 
 - <code>BedrockError</code> Will throw a `NotFoundError` if the package is not
@@ -75,8 +77,8 @@ Get package information. One of `alias` or `packageName` is required.
 ### bedrock-package-manager.findType(options) ⇒ [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo)
 Find packages by type.
 
-**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)  
-**Returns**: [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo) - The package information.  
+**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)
+**Returns**: [<code>Array.&lt;PackageInfo&gt;</code>](#PackageInfo) - The package information.
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -88,7 +90,7 @@ Find packages by type.
 ### bedrock-package-manager.register(options) ⇒ <code>undefined</code>
 Register a package.
 
-**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)  
+**Kind**: static method of [<code>bedrock-package-manager</code>](#module_bedrock-package-manager)
 **Throws**:
 
 - <code>BedrockError</code> Will throw a `DuplicateError` if the package is
@@ -108,7 +110,7 @@ Register a package.
 ## PackageInfo : <code>Object</code>
 Package information.
 
-**Kind**: global typedef  
+**Kind**: global typedef
 **Properties**
 
 | Name | Type | Description |

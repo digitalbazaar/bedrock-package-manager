@@ -1,10 +1,8 @@
 /*!
- * Copyright (c) 2019 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2019-2022 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
-const bedrock = require('bedrock');
-const brPackageManager = require('bedrock-package-manager');
+import * as bedrock from '@bedrock/core';
+import * as brPackageManager from '@bedrock/package-manager';
 
 bedrock.events.on('bedrock.init', () => {
   brPackageManager.register({
@@ -12,9 +10,9 @@ bedrock.events.on('bedrock.init', () => {
     meta: {
       optional: 'meta values',
     },
-    packageName: 'bedrock-package-manager-mock-package',
+    packageName: '@bedrock/package-manager-mock-package',
     type: 'bedrock-mock-plugin',
   });
 });
 
-exports.mockValue = 42;
+export const mockValue = 42;
