@@ -1,6 +1,6 @@
 # bedrock-package-manager
 
-## 2.0.0 - 2022-04-xx
+## 2.0.0 - 2022-04-02
 
 ### Changed
 - **BREAKING**: Rename package to `@bedrock/package-manager`.
