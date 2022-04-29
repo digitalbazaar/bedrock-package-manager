@@ -10,10 +10,10 @@
     "coverage-report": "c8 report"
   },
   "dependencies": {
-    "@bedrock/core": "^5.0.0",
+    "@bedrock/core": "^6.0.0",
     "@bedrock/package-manager": "file:..",
     "@bedrock/package-manager-mock-package": "file:./mock-package",
-    "@bedrock/test": "^7.0.0",
+    "@bedrock/test": "^8.0.0",
     "c8": "^7.11.0",
     "cross-env": "^7.0.2"
   },
